@@ -20,5 +20,5 @@ install2.r --error --ncpus 2 \
 R CMD javareconf
 EOF
 
-RUN R -e "remotes::install_github(repo = 'OHDSI/Achilles', ref = '${ACHILLES_GITHUB_REF}}')"
-RUN R -e "remotes::install_github(repo = 'OHDSI/AresIndexer', ref = '${ARESINDEXER_GITHUB_REF}}')"
+RUN R -e "remotes::install_github(repo = 'OHDSI/Achilles', ref = '${ACHILLES_GITHUB_REF}')"
+RUN R -e "remotes::install_github(repo = 'OHDSI/AresIndexer', ref = '${ARESINDEXER_GITHUB_REF}')"
