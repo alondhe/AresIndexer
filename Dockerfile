@@ -1,6 +1,6 @@
 FROM docker.io/rocker/r-ver:4.2.3
 ARG ACHILLES_GITHUB_REF=main
-ARG ARESINDEXER_GITHUB_REF=main
+ARG ARESINDEXER_GITHUB_REF=dockerfile
 
 WORKDIR /ares/data
 
@@ -21,4 +21,4 @@ R CMD javareconf
 EOF
 
 RUN R -e "remotes::install_github(repo = 'OHDSI/Achilles', ref = '${ACHILLES_GITHUB_REF}')"
-RUN R -e "remotes::install_github(repo = 'OHDSI/AresIndexer', ref = '${ARESINDEXER_GITHUB_REF}')"
+RUN R -e "remotes::install_github(repo = 'alondhe/AresIndexer', ref = '${ARESINDEXER_GITHUB_REF}')"
